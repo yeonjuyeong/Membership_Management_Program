@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ManageController">
+   <top>
+      <AnchorPane prefHeight="82.0" prefWidth="600.0" style="-fx-background-color: #ccefcf;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="127.0" layoutX="265.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@sungil-membership.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="318.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="23.0" layoutY="14.0" prefHeight="26.0" prefWidth="39.0" text="이름" />
+            <Button fx:id="deleteButton" layoutX="338.0" layoutY="100.0" mnemonicParsing="false" onAction="#deleteButtonAction" prefHeight="68.0" prefWidth="110.0" text="삭제" />
+            <TextField fx:id="nameTextField" layoutX="62.0" layoutY="16.0" prefHeight="22.0" prefWidth="254.0" />
+            <Label layoutX="23.0" layoutY="52.0" prefHeight="26.0" prefWidth="39.0" text="아이디" />
+            <TextField fx:id="idTextField" layoutX="62.0" layoutY="54.0" prefHeight="22.0" prefWidth="254.0" />
+            <PasswordField fx:id="pwPasswordField" layoutX="62.0" layoutY="87.0" prefHeight="22.0" prefWidth="254.0" />
+            <Label layoutX="23.0" layoutY="85.0" prefHeight="26.0" prefWidth="39.0" text="암호" />
+            <PasswordField fx:id="pw2PasswordField" layoutX="62.0" layoutY="113.0" prefHeight="22.0" prefWidth="255.0" />
+            <Label layoutX="13.0" layoutY="111.0" prefHeight="26.0" prefWidth="48.0" text="암호확인" />
+            <Label layoutX="23.0" layoutY="145.0" prefHeight="26.0" prefWidth="39.0" text="학년" />
+            <TextField fx:id="hakTextField" layoutX="62.0" layoutY="147.0" prefHeight="22.0" prefWidth="45.0" />
+            <Label layoutX="131.0" layoutY="145.0" prefHeight="26.0" prefWidth="39.0" text="반" />
+            <TextField fx:id="banTextField" layoutX="170.0" layoutY="147.0" prefHeight="22.0" prefWidth="45.0" />
+            <Label layoutX="243.0" layoutY="145.0" prefHeight="26.0" prefWidth="39.0" text="번호" />
+            <TextField fx:id="bunTextField" layoutX="282.0" layoutY="147.0" prefHeight="22.0" prefWidth="45.0" />
+            <Button fx:id="updateButton" layoutX="338.0" layoutY="18.0" mnemonicParsing="false" onAction="#updateButtonAction" prefHeight="70.0" prefWidth="108.0" text="수정" />
+            <Button fx:id="readButton" layoutX="458.0" layoutY="17.0" mnemonicParsing="false" onAction="#readButtonAction" prefHeight="72.0" prefWidth="127.0" text="리스트 읽기" />
+            <TableView fx:id="memberTableView" layoutX="13.0" layoutY="175.0" onMouseClicked="#memberTableViewAction" prefHeight="127.0" prefWidth="569.0">
+              <columns>
+                <TableColumn fx:id="nameTableColumn" prefWidth="92.00006103515625" text="이름" />
+                <TableColumn fx:id="idTableColumn" prefWidth="130.39996337890625" text="아이디" />
+                  <TableColumn fx:id="pwTableColumn" prefWidth="160.00006103515625" text="암호" />
+                  <TableColumn fx:id="hakTableColumn" prefWidth="61.5999755859375" text="학년" />
+                  <TableColumn fx:id="banTableColumn" prefWidth="65.5999755859375" text="반" />
+                  <TableColumn fx:id="bunTableColumn" prefWidth="61.5999755859375" text="번호" />
+              </columns>
+            </TableView>
+            <Button fx:id="closeButton" layoutX="458.0" layoutY="99.0" mnemonicParsing="false" onAction="#closeButtonAction" prefHeight="70.0" prefWidth="127.0" text="창닫기" />
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+   <left>
+      <ImageView fitHeight="524.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: blue;" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@sungil-login-left.jpg" />
+         </image>
+      </ImageView>
+   </left>
+   <right>
+      <AnchorPane prefHeight="400.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="101.0" fitWidth="399.0" layoutX="139.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@sungil-login-key.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="msgLabel" fill="RED" layoutX="24.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="임시 확인용" wrappingWidth="121.5">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <CheckBox fx:id="adminCheckBox" layoutX="252.0" layoutY="165.0" mnemonicParsing="false" onAction="#adminCheckBoxAction" prefHeight="23.0" prefWidth="60.0" text="관리자" />
+            <Label layoutX="32.0" layoutY="194.0" text="사용자 ID">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="241.0" text="사용자 PW">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="idTextField" layoutX="152.0" layoutY="195.0" prefHeight="24.0" prefWidth="177.0" promptText="아이디 입력" />
+            <PasswordField fx:id="pwPasswordField" layoutX="151.0" layoutY="242.0" prefHeight="24.0" prefWidth="178.0" promptText="비밀번호 입력" />
+            <Button fx:id="loginButton" layoutX="32.0" layoutY="288.0" mnemonicParsing="false" onAction="#loginButtonAction" prefHeight="53.0" prefWidth="161.0" style="-fx-background-color: #f5caca;" text="로그인">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="joinButton" layoutX="202.0" layoutY="288.0" mnemonicParsing="false" onAction="#joinButtonAction" prefHeight="53.0" prefWidth="161.0" style="-fx-background-color: #f5caca;" text="회원가입">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancelButton" layoutX="32.0" layoutY="354.0" mnemonicParsing="false" onAction="#cancelButtonAction" prefHeight="32.0" prefWidth="161.0" style="-fx-background-color: #f5caca;" text="취소">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="closeButton" layoutX="202.0" layoutY="354.0" mnemonicParsing="false" onAction="#closeButtonAction" prefHeight="32.0" prefWidth="161.0" style="-fx-background-color: #f5caca;" text="닫기">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
