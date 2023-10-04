@@ -8,6 +8,7 @@ SceneBuilder 있는 login.fxml을 가져와서 화면에 보여줌
 <br>
 <br>
 <br>4개 중 하나라도 오류가 있으면 alert
+
 ```java
 else {
 				if(checkEmpty==false) {
@@ -33,11 +34,14 @@ else {
 				}
 			}
 ```
+
 <br>
 <br>
 <br>
-![image](https://github.com/yeonjuyeong/Membership_Management_Program/assets/123055714/a3a6ba20-3271-4809-9030-1ef834f12aae)
+
+![image](https://github.com/yeonjuyeong/Membership_Management_Program/assets/123055714/a3a6ba20-3271-4809-9030-1ef834f12aae)   
 <br>idTextField와 pwPasswordField에 값이 있고
+
 ```java
 if(loginButton.getText().equals("로그인")) {
 		if(idTextField.getText().isBlank() || pwPasswordField.getText().isBlank()) {
@@ -46,6 +50,7 @@ if(loginButton.getText().equals("로그인")) {
 			alert.show();
 		}else {
 ```
+
 ![image](https://github.com/yeonjuyeong/Membership_Management_Program/assets/123055714/819a93cc-89bf-4762-9522-d6f4ced40d10)
 <br>adminCheckBox에 체크가 되어있으면 어드민 로그인으로 변환
 ```java
@@ -66,8 +71,9 @@ if(loginButton.getText().equals("로그인")) {
 				}
 			}else {
 ```
-![image](https://github.com/yeonjuyeong/Membership_Management_Program/assets/123055714/51578a03-0308-43d8-a01a-62f065436fe6)
-<br>안되어있으면 UserLogin으로 로그인
+![image](https://github.com/yeonjuyeong/Membership_Management_Program/assets/123055714/51578a03-0308-43d8-a01a-62f065436fe6)     
+안되어있으면 UserLogin으로 로그인
+
 ```java
 UserLogin = isUserLogin();
 				if(isUserLogin() == true) {
@@ -89,6 +95,7 @@ UserLogin = isUserLogin();
 		
 ```
 
+![image](https://github.com/yeonjuyeong/Membership_Management_Program/assets/123055714/7d6b0de4-e4e6-4cd1-a172-175b151cd0da)
 
 
 
